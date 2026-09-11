@@ -1,41 +1,41 @@
-# Moveshot Studio
+# MoveShot — sitio estático
 
-A cinematic portfolio site for an audiovisual production studio. The interface combines full-screen video, motion-driven transitions, project reels, an editorial profile, and a contact experience in a responsive React application.
+Sitio de la productora MoveShot (Santiago, Chile) en HTML + CSS + JS puro, sin frameworks.
+El contenido viene renderizado en el HTML para SEO (antes era un SPA de React con `<div id="root">` vacío).
 
-## Highlights
+## Estructura
 
-- Responsive single-page composition
-- Motion-based navigation and section transitions
-- Video-first hero and project portfolio
-- Alternate visual explorations preserved in screenshots
-- Cloudflare Pages deployment workflow
-- TypeScript, React 19, Vite, Tailwind CSS, and Motion
+- `index.html` — contenido + metas SEO/OG + JSON-LD
+- `styles.css` — todo el diseño (~16 KB)
+- `script.js` — header, menú móvil, scroll suave, lightbox del reel (~2 KB)
+- `public/` — se copia tal cual a `dist/`
+  - `assets/videos/hero-reel.mp4` + póster
+  - `assets/images/` — fotos BTS + `og-cover.jpg` (1200×630)
+  - `assets/logos/` — logos de clientes
+  - `robots.txt`, `sitemap.xml` (dominio canónico: `https://moveshot.cl/`)
+- `screenshots/` — capturas de las direcciones de diseño exploradas
 
-## Getting started
+## Desarrollo
 
-Requirements: Node.js 20+ and pnpm.
+Requisitos: Node.js 20+ y pnpm.
 
 ```bash
 pnpm install
-cp .env.example .env.local
-pnpm dev
+pnpm run dev      # http://localhost:3000
+pnpm run build    # genera dist/
+pnpm run preview  # sirve dist/ local
 ```
 
-The site runs at `http://localhost:3000` by default. The Gemini key is optional for the current static portfolio experience; never commit a real key.
+## Deploy
 
-## Validation
+Automático a Cloudflare Pages con push a `main` (`.github/workflows/` → `pnpm run build` → `dist/`).
+No se tocó el pipeline: `build` sigue generando `dist/`.
 
-```bash
-pnpm lint
-pnpm build
-```
+## Pendientes del dueño
 
-## Structure
+- [ ] Confirmar dominio canónico (ahora `moveshot.cl` en metas, sitemap y JSON-LD).
+- [ ] Reemplazar WhatsApp `56900000000` en `index.html` por el número real.
+- [ ] Comprimir `hero-reel.mp4` (18 MB, 113 s) o subirlo a Stream/R2 si el LCP sufre.
+- [ ] Registrar el sitio en Google Search Console y pedir indexación.
 
-```text
-src/components/  Page sections and reusable visual elements
-src/assets/      Images, logos, and the local hero reel
-screenshots/     Captures of the implemented design directions
-```
-
-This repository is a portfolio snapshot. Brand media remains the property of its respective owners and is included only to demonstrate the implemented experience.
+El material de marcas es propiedad de sus respectivos dueños y se incluye solo para mostrar el trabajo realizado.

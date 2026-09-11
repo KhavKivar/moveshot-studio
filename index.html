@@ -1,13 +1,457 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MoveShot — Productora de Cine</title>
+    <title>MoveShot · Productora Audiovisual en Chile — Comerciales y Cine</title>
+    <meta
+      name="description"
+      content="MoveShot es una productora boutique en Santiago, Chile. Comerciales, videoclips y narrativa visual con la dirección de fotografía de José Miguel Miño. Cotiza tu proyecto."
+    />
+    <link rel="canonical" href="https://moveshot.cl/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#050505" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:site_name" content="MoveShot" />
+    <meta property="og:title" content="MoveShot · Productora Audiovisual en Chile" />
+    <meta
+      property="og:description"
+      content="Imágenes que no se quedan quietas. Comerciales, videoclips y narrativa visual para marcas. Santiago, Chile."
+    />
+    <meta property="og:url" content="https://moveshot.cl/" />
+    <meta property="og:image" content="https://moveshot.cl/assets/images/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Rodaje cinematográfico del equipo MoveShot" />
+    <meta property="og:video" content="https://moveshot.cl/assets/videos/hero-reel.mp4" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MoveShot · Productora Audiovisual en Chile" />
+    <meta
+      name="twitter:description"
+      content="Imágenes que no se quedan quietas. Comerciales, videoclips y narrativa visual para marcas."
+    />
+    <meta name="twitter:image" content="https://moveshot.cl/assets/images/og-cover.jpg" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23050505'/%3E%3Cpath d='M18,48 L27,33 L37,59 L46,24 L56,63 L65,30 L74,53 L81,42' transform='translate(0, 6.5)' fill='none' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://moveshot.cl/#negocio",
+            "name": "MoveShot Cinematografía",
+            "url": "https://moveshot.cl/",
+            "image": "https://moveshot.cl/assets/images/og-cover.jpg",
+            "description": "Productora boutique especializada en comerciales, videoclips y narrativa visual para marcas.",
+            "slogan": "Imágenes que no se quedan quietas.",
+            "areaServed": { "@type": "Country", "name": "Chile" },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Santiago",
+              "addressCountry": "CL"
+            },
+            "email": "contacto@moveshot.cl",
+            "founder": {
+              "@type": "Person",
+              "name": "José Miguel Miño",
+              "jobTitle": "Director de Fotografía",
+              "description": "Cineasta chileno, presidente de la Asociación Chilena de Cine (ACC)."
+            },
+            "sameAs": [
+              "https://www.instagram.com/moveshot/",
+              "https://www.instagram.com/m_rentalhouse/",
+              "https://www.instagram.com/manuelasph/",
+              "https://www.instagram.com/josemiraw.mino/"
+            ],
+            "knowsAbout": [
+              "Dirección de fotografía",
+              "Comerciales de televisión",
+              "Videoclips",
+              "Cine publicitario"
+            ]
+          },
+          {
+            "@type": "VideoObject",
+            "name": "MoveShot — Reel 2025",
+            "description": "Selección de trabajos de dirección de fotografía: comerciales y piezas para Corona, CCU, Ripley, Santander, Mallplaza y más.",
+            "thumbnailUrl": "https://moveshot.cl/assets/videos/hero-reel-poster.jpg",
+            "contentUrl": "https://moveshot.cl/assets/videos/hero-reel.mp4",
+            "uploadDate": "2025-01-01"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" id="site-header">
+      <nav class="nav container" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" data-scroll="inicio" aria-label="MoveShot — inicio">
+          <span class="brand-badge" aria-hidden="true">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18,48 L27,33 L37,59 L46,24 L56,63 L65,30 L74,53 L81,42" transform="translate(0, 6.5)" />
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Move<span class="brand-name-light">Shot</span></span>
+            <span class="brand-sub">Cinema &amp; Prod</span>
+          </span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#inicio" data-scroll="inicio">Inicio</a>
+          <a href="#nosotros" data-scroll="nosotros">Nosotros</a>
+          <a href="#contacto" data-scroll="contacto">Contacto</a>
+        </div>
+
+        <div class="nav-actions">
+          <a
+            class="icon-link"
+            href="https://www.instagram.com/josemiraw.mino/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de José Miguel Miño"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+          <a class="btn btn-dark btn-sm" href="#contacto" data-scroll="contacto">
+            Cotizar proyecto
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 7h10v10" />
+              <path d="M7 17 17 7" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="nav-mobile-actions">
+          <a
+            class="icon-link"
+            href="https://www.instagram.com/josemiraw.mino/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de José Miguel Miño"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+          <button
+            class="menu-btn"
+            id="menu-btn"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Abrir menú"
+          >
+            <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+            <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <a href="#inicio" data-scroll="inicio">Inicio</a>
+        <a href="#nosotros" data-scroll="nosotros">Nosotros</a>
+        <a href="#contacto" data-scroll="contacto">Contacto</a>
+        <a class="btn btn-dark btn-block" href="#contacto" data-scroll="contacto">Cotizar proyecto</a>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- HERO -->
+      <section id="inicio" aria-labelledby="titulo-hero">
+        <div class="hero-media">
+          <video
+            src="./assets/videos/hero-reel.mp4"
+            poster="./assets/videos/hero-reel-poster.jpg"
+            autoplay
+            loop
+            muted
+            playsinline
+            disablepictureinpicture
+            preload="metadata"
+            aria-label="Reel cinematográfico de MoveShot reproduciéndose en silencio"
+          ></video>
+          <div class="hero-shade" aria-hidden="true"></div>
+          <div class="hero-content container">
+            <h1 id="titulo-hero">Imágenes que no<br />se quedan quietas.</h1>
+            <div class="hero-ctas">
+              <a class="btn btn-light" href="#contacto" data-scroll="contacto">
+                Cotizar proyecto
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
+                </svg>
+              </a>
+              <button class="btn btn-ghost" id="open-reel" type="button">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon points="6 3 20 12 6 21 6 3" />
+                </svg>
+                Ver reel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="clients">
+          <div class="container">
+            <div class="clients-head">
+              <div class="stars" role="img" aria-label="Calificación de 5 sobre 5 estrellas">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              </div>
+              <p class="label-dark">Marcas que han confiado en nuestro trabajo</p>
+            </div>
+
+            <div class="marquee" role="region" aria-label="Marcas clientes">
+              <div class="marquee-track">
+                <ul class="marquee-list">
+                  <li class="client-card"><img src="./assets/logos/corona.png" alt="Corona" loading="lazy" /></li>
+                  <li class="client-card"><span class="logo-text logo-arcor">Arcor</span></li>
+                  <li class="client-card"><img src="./assets/logos/ccu.png" alt="CCU" loading="lazy" /></li>
+                  <li class="client-card"><span class="logo-text logo-afp"><strong>AFP</strong> <em>uno</em></span></li>
+                  <li class="client-card"><span class="logo-text logo-metro"><span class="metro-m">M</span> Metro</span></li>
+                  <li class="client-card"><span class="logo-text logo-makakoo">Makakoo</span></li>
+                  <li class="client-card"><span class="logo-text logo-probiplus">Probiplus</span></li>
+                  <li class="client-card"><img src="./assets/logos/ripley.png" alt="Ripley Chile" loading="lazy" /></li>
+                  <li class="client-card"><img src="./assets/logos/fantasilandia.png" alt="Fantasilandia" loading="lazy" /></li>
+                  <li class="client-card"><span class="logo-text logo-chocapic">Chocapic</span></li>
+                  <li class="client-card"><span class="logo-text logo-ahumada"><span class="ahumada-plus">+</span> ahumada</span></li>
+                  <li class="client-card"><img src="./assets/logos/mallplaza.svg" alt="Mallplaza" loading="lazy" /></li>
+                  <li class="client-card"><img src="./assets/logos/santander.svg" alt="Santander" loading="lazy" /></li>
+                </ul>
+                <ul class="marquee-list" aria-hidden="true">
+                  <li class="client-card"><img src="./assets/logos/corona.png" alt="" loading="lazy" /></li>
+                  <li class="client-card"><span class="logo-text logo-arcor">Arcor</span></li>
+                  <li class="client-card"><img src="./assets/logos/ccu.png" alt="" loading="lazy" /></li>
+                  <li class="client-card"><span class="logo-text logo-afp"><strong>AFP</strong> <em>uno</em></span></li>
+                  <li class="client-card"><span class="logo-text logo-metro"><span class="metro-m">M</span> Metro</span></li>
+                  <li class="client-card"><span class="logo-text logo-makakoo">Makakoo</span></li>
+                  <li class="client-card"><span class="logo-text logo-probiplus">Probiplus</span></li>
+                  <li class="client-card"><img src="./assets/logos/ripley.png" alt="" loading="lazy" /></li>
+                  <li class="client-card"><img src="./assets/logos/fantasilandia.png" alt="" loading="lazy" /></li>
+                  <li class="client-card"><span class="logo-text logo-chocapic">Chocapic</span></li>
+                  <li class="client-card"><span class="logo-text logo-ahumada"><span class="ahumada-plus">+</span> ahumada</span></li>
+                  <li class="client-card"><img src="./assets/logos/mallplaza.svg" alt="" loading="lazy" /></li>
+                  <li class="client-card"><img src="./assets/logos/santander.svg" alt="" loading="lazy" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOSOTROS -->
+      <section id="nosotros" aria-labelledby="titulo-nosotros">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Detrás de la lente</p>
+            <h2 id="titulo-nosotros">José Miguel Miño</h2>
+            <p class="role">Director de fotografía &amp; presidente de la ACC</p>
+
+            <blockquote class="pull-quote">
+              <p>“La creatividad es la capacidad de resolver problemas con soluciones que no son evidentes” — <cite>José Miguel Miño</cite>.</p>
+            </blockquote>
+
+            <p><strong>Cineasta curicano</strong> egresado de la generación 2009–2015, formado en la transición del formato analógico al digital. Su trayectoria se ha construido bajo la premisa de “decir que sí a todo”, dominando cada aspecto técnico y colaborativo en el set, lo que hoy lo posiciona como un referente en la industria audiovisual chilena y líder de la Asociación Chilena de Cine (ACC).</p>
+
+            <p><strong>Para José Miguel</strong>, el lenguaje cinematográfico es un idioma estructurado que exige rigurosidad, técnica y un profundo respeto por sus reglas. Su enfoque profesional equilibra el ala técnica y la emotiva, guiado por una filosofía de aprendizaje continuo: decisiones audaces, seguidas de una reflexión metódica para pulir cada resultado.</p>
+
+            <p><strong>Formado en la escasez de tiempo y recursos</strong>, heredó la práctica de “pensar antes de filmar”, rescatando el valor y la magia detrás de cada imagen. Su identidad como realizador se define por optimizar recursos, abrazar la sutileza del lenguaje visual y desafiar constantemente las expectativas del espectador.</p>
+
+            <ul class="traits">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z" /><path d="m6.2 5.3 3.1 3.9" /><path d="m12.4 3.4 3.1 4" /><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" /></svg>
+                <div><h3>Cineasta</h3><p>Apasionado por el detrás de escena y la narrativa visual.</p></div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                <div><h3>Liderazgo</h3><p>Presidente de la Asociación Chilena de Cine (ACC).</p></div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" /><circle cx="12" cy="13" r="3" /></svg>
+                <div><h3>Enfoque</h3><p>Técnica, intuición y pensamiento analítico al servicio de la historia.</p></div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6" /><path d="M10 22h4" /><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z" /></svg>
+                <div><h3>Filosofía</h3><p>Optimizar recursos, pensar antes de filmar y desafiar límites.</p></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-media">
+            <figure class="portrait">
+              <img
+                src="./assets/images/bts_set_1781627280108.jpg"
+                alt="José Miguel Miño dirigiendo un rodaje en Santiago, Chile"
+                loading="lazy"
+                width="1200"
+                height="900"
+              />
+              <div class="portrait-shade" aria-hidden="true"></div>
+              <figcaption>
+                <span class="fig-top">En rodaje</span>
+                <span class="fig-title">Detrás de escenas (BTS)</span>
+                <span class="fig-place">Santiago, Chile</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" aria-labelledby="titulo-contacto">
+        <div class="container contact-inner">
+          <p class="eyebrow eyebrow-center"><span class="dot" aria-hidden="true"></span>Agendar rodaje</p>
+          <h2 id="titulo-contacto">¿Tienes un proyecto?<br />Hablemos.</h2>
+          <p class="contact-sub">Síguenos o escríbenos directo, lo que prefieras.</p>
+
+          <ul class="ig-cards">
+            <li>
+              <a href="https://www.instagram.com/moveshot/" target="_blank" rel="noopener noreferrer">
+                <span class="ig-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+                </span>
+                <span>@moveshot</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/m_rentalhouse/" target="_blank" rel="noopener noreferrer">
+                <span class="ig-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+                </span>
+                <span>@m_rentalhouse</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/manuelasph/" target="_blank" rel="noopener noreferrer">
+                <span class="ig-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+                </span>
+                <span>@manuelasph</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="contact-ctas">
+            <a class="btn btn-dark" href="https://wa.me/56900000000" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg>
+              WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+            </a>
+            <a class="btn btn-outline" href="mailto:contacto@moveshot.cl">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+              contacto@moveshot.cl
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand" href="#inicio" data-scroll="inicio" aria-label="MoveShot — inicio">
+              <span class="brand-badge" aria-hidden="true">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18,48 L27,33 L37,59 L46,24 L56,63 L65,30 L74,53 L81,42" transform="translate(0, 6.5)" />
+                </svg>
+              </span>
+              <span class="brand-text">
+                <span class="brand-name">Move<span class="brand-name-light">Shot</span></span>
+                <span class="brand-sub">Cinema &amp; Prod</span>
+              </span>
+            </a>
+            <p>Productora boutique especializada en comerciales, videoclips y narrativa visual para marcas.</p>
+          </div>
+
+          <address class="footer-coords">
+            <div>
+              <span class="footer-label">Contacto directo</span>
+              <a href="mailto:contacto@moveshot.cl">contacto@moveshot.cl</a>
+            </div>
+            <div>
+              <span class="footer-label">Redes sociales</span>
+              <a href="https://www.instagram.com/josemiraw.mino/" target="_blank" rel="noopener noreferrer">
+                @josemiraw.mino
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+              </a>
+            </div>
+          </address>
+
+          <button class="to-top" id="to-top" type="button" aria-label="Volver arriba">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 7-7 7 7" /><path d="M12 19V5" /></svg>
+          </button>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© <span id="year">2026</span> Moveshot Cinematografía. Todos los derechos reservados.</p>
+          <p class="footer-credit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M7 3v18" /><path d="M3 7.5h4" /><path d="M3 12h18" /><path d="M3 16.5h4" /><path d="M17 3v18" /><path d="M17 7.5h4" /><path d="M17 16.5h4" /></svg>
+            José Miguel Miño | Director de fotografía
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="reel-dialog" id="reel-dialog" aria-labelledby="reel-title">
+      <div class="reel-box">
+        <button class="reel-close" id="close-reel" type="button" aria-label="Cerrar reel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+        </button>
+        <video
+          id="reel-video"
+          src="./assets/videos/hero-reel.mp4"
+          poster="./assets/videos/hero-reel-poster.jpg"
+          controls
+          playsinline
+          preload="none"
+        ></video>
+        <div class="reel-foot">
+          <span id="reel-title">MoveShot Realizadores</span>
+          <a href="https://www.instagram.com/p/DEgd9sNuo8T/" target="_blank" rel="noopener noreferrer">
+            Ver en Instagram
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+          </a>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
-
