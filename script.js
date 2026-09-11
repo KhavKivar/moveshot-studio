@@ -39,6 +39,79 @@ menuBtn.addEventListener("click", () => {
   mobileMenu.hidden = !open;
 });
 
+// Portafolio: filtros + ficha de proyecto en <dialog>.
+const filterButtons = [...document.querySelectorAll("[data-filter]")];
+const projectCards = [...document.querySelectorAll(".project-card")];
+const projectsStatus = document.getElementById("projects-status");
+const projectDialog = document.getElementById("project-dialog");
+const projectVideo = document.getElementById("project-video");
+const projectCategory = document.getElementById("project-category");
+const projectYear = document.getElementById("project-year");
+const projectTitle = document.getElementById("project-title");
+const projectDescription = document.getElementById("project-description");
+const projectClient = document.getElementById("project-client");
+const projectRole = document.getElementById("project-role");
+const projectCamera = document.getElementById("project-camera");
+const projectDate = document.getElementById("project-date");
+let lastProjectTrigger = null;
+
+const updateProjectsStatus = (filter) => {
+  if (!projectsStatus) return;
+  const visible = projectCards.filter((card) => !card.hidden).length;
+  const label = filter === "Todos" ? "proyectos" : filter === "Videoclip" ? "videoclips" : "comerciales";
+  projectsStatus.textContent = `${visible} ${visible === 1 ? label.slice(0, -1) : label}`;
+};
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+    filterButtons.forEach((other) => other.setAttribute("aria-pressed", String(other === button)));
+    projectCards.forEach((card) => {
+      card.hidden = filter !== "Todos" && card.dataset.category !== filter;
+    });
+    updateProjectsStatus(filter);
+  });
+});
+updateProjectsStatus("Todos");
+
+const closeProject = () => {
+  if (!projectDialog) return;
+  projectVideo.pause();
+  projectVideo.removeAttribute("src");
+  projectVideo.load();
+  if (projectDialog.open) projectDialog.close();
+  if (lastProjectTrigger) lastProjectTrigger.focus();
+};
+
+projectCards.forEach((card) => {
+  const trigger = card.querySelector(".project-trigger");
+  if (!trigger) return;
+  trigger.addEventListener("click", () => {
+    lastProjectTrigger = trigger;
+    const title = card.querySelector("h3")?.textContent.trim() ?? "";
+    projectCategory.textContent = card.dataset.category ?? "";
+    projectYear.textContent = `AÑO ${card.dataset.year ?? ""}`;
+    projectTitle.textContent = title;
+    projectDescription.textContent = card.dataset.description ?? "";
+    projectClient.textContent = card.dataset.client ?? "";
+    projectRole.textContent = card.dataset.role ?? "";
+    projectCamera.textContent = card.dataset.camera ?? "";
+    projectDate.textContent = card.dataset.year ?? "";
+    projectVideo.setAttribute("src", card.dataset.video ?? "");
+    projectVideo.load();
+    projectDialog.showModal();
+    projectVideo.play().catch(() => {});
+  });
+});
+document.getElementById("close-project")?.addEventListener("click", closeProject);
+projectDialog?.addEventListener("click", (e) => {
+  if (e.target === projectDialog) closeProject();
+});
+projectDialog?.addEventListener("close", () => {
+  projectVideo.pause();
+  if (lastProjectTrigger) lastProjectTrigger.focus();
+});
+
 // Reel: <dialog> nativo, accesible y sin dependencias.
 document.getElementById("open-reel").addEventListener("click", () => {
   dialog.showModal();
